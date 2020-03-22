@@ -1,6 +1,6 @@
 <?php
 
-namespace StephanGroen\Tesla;
+namespace BoxyStudio\Tesla;
 
 class Tesla
 {

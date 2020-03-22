@@ -8,13 +8,13 @@ This client is very basic, so most changes to the Tesla API will automatically b
 This project can easily be installed through Composer.
 
 ```
-composer require stephangroen/tesla-php-client
+composer require boxystudio/tesla-php-client
 ```
 
 ## One-time authentication process
 Before you can start, you will first need to get an access token. This is a one-time process. Fortunatly the client makes this very simple. Get the client_id and client_secret here: http://pastebin.com/fX6ejAHd. You need to add them to you environment via a .env file in your existing project or use the functions supplied by the client. You need your email address and password you use for My Tesla. With these credentials you can get the access token.
 ```php
-$tesla = new StephanGroen\Tesla\Tesla();
+$tesla = new BoxyStudio\Tesla\Tesla();
 $tesla->setClientId('client_id_here');
 $tesla->setClientSecret('client_secret_here');
 $accessToken = $tesla->getAccessToken('your_username', 'your_password');
@@ -24,24 +24,24 @@ The access token is the only authentication token you need after this one-time p
 ## Use the client
 Next time you'd like to use the client, initiate it with the access token:
 ```php
-$tesla = new StephanGroen\Tesla\Tesla('your_access_token');
+$tesla = new BoxyStudio\Tesla\Tesla('your_access_token');
 ```
 ## Get and set your vehicle id
 In order to execute vehicle specific calls, you need your vehicle id. Retrieve this by requesting all vehicles for your account:
 ```php
-$tesla = new StephanGroen\Tesla\Tesla();
+$tesla = new BoxyStudio\Tesla\Tesla();
 $tesla->vehicles();
 ```
 This will return an array with information about your vehicles. Extract the `id` from the respone, not the `vehicle_id` which is used for Tesla internal purposes. You might want to store this id locally for future use. When you have the id, let the client know as follows:
 ```php
-$tesla = new StephanGroen\Tesla\Tesla();
+$tesla = new BoxyStudio\Tesla\Tesla();
 $tesla->setVehicleId(123);
 ```
 
 ## Example call
 Calls are very simple, read the source code and API docs to find out all available calls. For example, set the charge limit to 90 percent:
 ```php
-$tesla = new StephanGroen\Tesla\Tesla('87dsfg76sdfg765sdfg765dsfg76fgds76');
+$tesla = new BoxyStudio\Tesla\Tesla('87dsfg76sdfg765sdfg765dsfg76fgds76');
 $tesla->setVehicleId(123);
 $tesla->setChargeLimit(90);
 ```

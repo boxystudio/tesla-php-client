@@ -1,5 +1,5 @@
 <?php
 
-namespace StephanGroen\Tesla;
+namespace BoxyStudio\Tesla;
 
 class TeslaException extends \Exception {}

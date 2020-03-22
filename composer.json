@@ -1,5 +1,5 @@
 {
-  "name": "stephangroen/tesla-php-client",
+  "name": "boxystudio/tesla-php-client",
   "type": "library",
   "description": "A PHP Client for the Tesla API",
   "keywords": [
@@ -7,12 +7,12 @@
     "php",
     "tesla"
   ],
-  "homepage": "http://github.com/stephangroen/testla-php-client",
+  "homepage": "http://github.com/boxystudio/testla-php-client",
   "license": "MIT",
   "authors": [
     {
-      "name": "Stephan Groen",
-      "email": "mail@stephangroen.nl"
+      "name": "Justin Scheetz",
+      "email": "justin@boxystudio.com"
     }
   ],
   "require": {
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "StephanGroen\\Tesla\\": "src/StephanGroen/Tesla"
+      "BoxyStudio\\Tesla\\": "src/BoxyStudio/Tesla"
     }
   }
 }
